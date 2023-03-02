@@ -1,0 +1,33 @@
+#include<iostream>
+#include<list>
+using namespace std;
+int main()
+{                                  //creating a new list
+    list<int>l;
+    l.push_back(1);
+     l.push_back(3);
+      l.push_back(4);
+    l.push_front(2);
+    
+    for(int i:l)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+
+l.erase(l.begin());               //deleting a element
+cout<<"after erase  ";
+ for(int i:l)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+    
+
+cout<<"the size of list is"<<l.size()<<endl;          //size of list
+
+list<int>p(5,10);                //again making of new list
+ for(int i:p)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+
+}

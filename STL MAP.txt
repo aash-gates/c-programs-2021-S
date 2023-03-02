@@ -1,0 +1,33 @@
+#include<iostream>
+#include<map>
+using namespace std;
+int main()
+{
+    map<int , string>m;
+    m[1] = " PARTH ";
+    m[2] = " SHARMA ";
+    m[3] = " FROM ";
+    m[4] = " MUMBAI ";
+    m[5] = " IS ";
+    m[6] = " BEST ";
+    
+    m.insert({5,"MUMBAI"});
+    cout<<"before erase"<<endl;
+    for(auto i:m)
+    {
+        cout<<i.first<<i.second<<endl;
+    }
+    cout<<endl;
+    m.erase(3);
+    cout<<"after erase"<<endl;
+    for(auto i:m)
+    {
+        cout<<i.first<<i.second<<endl;
+    }cout<<endl<<endl;
+    
+    auto it = m.find(2);
+    for(auto i=it;i!=m.end();i++)
+    {
+        cout<<(*i).first<<endl;
+    }
+}
